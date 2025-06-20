@@ -10,9 +10,6 @@ import DeleteCard from './components/DeleteCard';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
-import AddServiceProfile from './components/AddServiceProfile';
-
-
 
 
 function App() {
@@ -31,6 +28,12 @@ function App() {
       <Route path='/home' exact component={Home} />
       <Route path='/addprofile' exact component={AddServiceProfile} />
     </div>
+    <div class="wrapper">
+        <Sidenav />
+        <Route path="/" exact component={EnquiriesList} />
+        <Route path="/edit/:id" component={EditEnquiries} />
+        <Route path="/create" component={CreateEnquiries} />
+      </div>
     </Router>
    
   );
